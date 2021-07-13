@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Helmet } from 'react-helmet';
-
+import "./SignInAndSignOut.css";
 class SignUpForm extends Component {
     constructor() {
         super();
@@ -102,7 +102,7 @@ class SignUpForm extends Component {
                         </div>
 
                         <div className="formField">
-                            <label className="formFieldCheckboxLabel">
+                            <label className="formFieldCheckboxLabel  disable-text-selection">
                                 <input
                                     className="formFieldCheckbox"
                                     type="checkbox"

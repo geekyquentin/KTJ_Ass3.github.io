@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Helmet } from 'react-helmet';
-// import {
-//     FacebookLoginButton,
-//     InstagramLoginButton
-// } from "react-social-login-buttons";
+import "./SignInAndSignOut.css";
 
 class SignInForm extends Component {
     constructor() {
