@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 //     InstagramLoginButton
 // } from "react-social-login-buttons";
 
-class SignInForm extends Component {
+class dashboardPage extends Component {
     constructor() {
         super();
 
@@ -71,7 +71,7 @@ class SignInForm extends Component {
 
                     <div className="formField">
                         <button className="formFieldButton">Sign In</button>
-                        <Link to="/sign-up" className="formFieldLink">
+                        <Link to="/" className="formFieldLink">
                             Create an account
                         </Link>
                     </div>
@@ -91,4 +91,4 @@ class SignInForm extends Component {
     }
 }
 
-export default SignInForm;
+export default dashboardPage;

@@ -4,16 +4,16 @@
 	color: white;
 }
 
-.appAside {
-	width: 50%;
-	background-color: #6b5b95;
-}
-
 .appForm {
-	width: 50%;
+	width: 48rem;
 	background-color: #12130f;
 	padding: 25px 40px;
-	overflow: auto;
+}
+
+.navIcons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .pageSwitcher {
@@ -109,17 +109,20 @@
 	border: none;
 	outline: none;
 	border-radius: 25px;
-	padding: 15px 70px;
-	font-size: 0.8em;
+	padding: 11px 40px;
+	font-size: 1.1rem;
 	font-weight: 500;
+	cursor: pointer;
 }
 
 .formFieldLink {
 	color: #66707d;
 	text-decoration: none;
-	display: inline-block;
+	display: block;
+	position: absolute;
 	border-bottom: 1.5px solid #6b5b95;
-	padding-bottom: 5px;
+	padding: 5px;
+	margin-top: 1rem;
 }
 
 .formFieldCheckboxLabel {
@@ -143,4 +146,13 @@
 
 .socialMediaButtons {
 	padding: 10px 100px 10px 0px;
+}
+
+.disable-text-selection {
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	user-select: none;
 }
