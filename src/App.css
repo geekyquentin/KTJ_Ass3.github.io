@@ -18,7 +18,15 @@
 }
 
 .navbarLogo {
-	width: 3rem;
+	width: 3.5rem;
+	vertical-align: middle;
+}
+
+.logoName {
+	margin-left: 1rem;
+	font-size: 2rem;
+	font-family: 'Zen Tokyo Zoo', cursive;
+	vertical-align: middle;
 }
 
 .pageSwitcher {

@@ -14,7 +14,7 @@ class App extends Component {
 				<div className="App">
 					<div className="appForm">
 						<div className="navbar">
-							<div><img src={companyLogo} className="navbarLogo" alt="logo" /></div>
+							<div className="iconText"><img src={companyLogo} className="navbarLogo" alt="logo" /><span className="logoName">Messaging Mafia</span></div>
 							<div className="pageSwitcher">
 								<NavLink
 									to="/dashboard"
