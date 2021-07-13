@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import dashboardPage from "./pages/dashboardPage";
 import SignUpForm from "./pages/SignUpForm";
 import SignInForm from "./pages/SignInForm";
+import companyLogo from "./logo.ico";
 
 import "./App.css";
 
@@ -12,16 +13,16 @@ class App extends Component {
 			<Router>
 				<div className="App">
 					<div className="appForm">
-						<div className="navIcons disable-text-selection">
-							<div className="dashboardBackIcon">
+						<div className="navbar">
+							<div><img src={companyLogo} className="navbarLogo" alt="logo" /></div>
+							<div className="pageSwitcher">
 								<NavLink
 									to="/dashboard"
 									activeClassName="pageSwitcherItem-active"
-									className="arrowLeftIcon"
-								><i className="fas fa-2x fa-chevron-left"></i>
+									className="pageSwitcherItem"
+								>
+									Dashboard
 								</NavLink>
-							</div>
-							<div className="pageSwitcher">
 								<NavLink
 									to="/sign-in"
 									activeClassName="pageSwitcherItem-active"

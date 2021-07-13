@@ -2,30 +2,36 @@
 	height: 100vh;
 	display: flex;
 	color: white;
+	background-color: #12130f;
+	/* background-color: #f0f4fb; */
 }
 
 .appForm {
-	width: 48rem;
-	background-color: #12130f;
+	width: 100%;
 	padding: 25px 40px;
 }
 
-.navIcons {
+.navbar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
+.navbarLogo {
+	width: 3rem;
+}
+
 .pageSwitcher {
 	display: flex;
 	justify-content: flex-end;
-	margin-bottom: 10%;
+	margin-bottom: 3rem;
 }
 
 .pageSwitcherItem {
-	background-color: #40434e;
 	color: #9da6b1;
-	padding: 10px 25px;
+	text-transform: uppercase;
+	padding: 10px 2px;
+	margin: 0 25px;
 	cursor: pointer;
 	font-size: 0.9em;
 	border: none;
@@ -35,20 +41,12 @@
 }
 
 .pageSwitcherItem-active {
-	background-color: #6b5b95;
+	border-bottom: 1px solid #6b5b95;
 	color: white;
 }
 
-.pageSwitcherItem:first-child {
-	border-top-left-radius: 25px;
-	border-bottom-left-radius: 25px;
-}
-.pageSwitcherItem:last-child {
-	border-top-right-radius: 25px;
-	border-bottom-right-radius: 25px;
-}
-
 .formCenter {
+	max-width: 40rem;
 	margin-bottom: 100px;
 }
 
@@ -115,14 +113,22 @@
 	cursor: pointer;
 }
 
+.formFieldButton:hover {
+	background-color: #4c406b;
+}
+
 .formFieldLink {
 	color: #66707d;
 	text-decoration: none;
 	display: block;
 	position: absolute;
-	border-bottom: 1.5px solid #6b5b95;
-	padding: 5px;
+	padding: 3px 0;
 	margin-top: 1rem;
+}
+
+.formFieldLink:hover {
+	border-bottom: 1.5px solid #6b5b95;
+	color: rgba(255, 255, 255, 0.801);
 }
 
 .formFieldCheckboxLabel {
