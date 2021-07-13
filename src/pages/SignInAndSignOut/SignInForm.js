@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 // import {
 //     FacebookLoginButton,
@@ -42,6 +42,22 @@ class SignInForm extends Component {
                 <Helmet>
                     <title>Messaging Mafia | Sign In</title>
                 </Helmet>
+                <div className="formTitle disable-text-selection">
+                    <NavLink
+                        to="/sign-in"
+                        activeClassName="formTitleLink-active"
+                        className="formTitleLink"
+                    >
+                        Sign In
+                    </NavLink>
+                    <NavLink
+                        to="/sign-up"
+                        activeClassName="formTitleLink-active"
+                        className="formTitleLink"
+                    >
+                        Sign Up
+                    </NavLink>
+                </div>
                 <div className="formCenter">
                     <form className="formFields" onSubmit={this.handleSubmit}>
                         <div className="formField">

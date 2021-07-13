@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, NavLink } from "react-router-dom";
-import dashboardPage from "./pages/dashboardPage";
-import SignUpForm from "./pages/SignUpForm";
-import SignInForm from "./pages/SignInForm";
+import { HashRouter as Router, Route, NavLink, Redirect } from "react-router-dom";
+import dashboardPage from "./pages/Dashboard/dashboardPage";
+import SignUpForm from "./pages/SignInAndSignOut/SignUpForm";
+import SignInForm from "./pages/SignInAndSignOut/SignInForm";
 import companyLogo from "./logo.ico";
 
 import "./App.css";
@@ -40,22 +40,11 @@ class App extends Component {
 							</div>
 						</div>
 
-						<div className="formTitle disable-text-selection">
-							<NavLink
-								to="/sign-in"
-								activeClassName="formTitleLink-active"
-								className="formTitleLink"
-							>
-								Sign In
-							</NavLink>
-							<NavLink
-								to="/sign-up"
-								activeClassName="formTitleLink-active"
-								className="formTitleLink"
-							>
-								Sign Up
-							</NavLink>
-						</div>
+						<Route exact path="/" render={() => {
+							return (
+								<Redirect to="/dashboard" />
+							)
+						}} />
 						<Route path="/dashboard" component={dashboardPage} />
 						<Route path="/sign-up" component={SignUpForm} />
 						<Route path="/sign-in" component={SignInForm} />

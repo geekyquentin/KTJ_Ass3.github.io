@@ -1,0 +1,33 @@
+.grocery-list{
+    /* border: 1px solid red; */
+    margin: 20px auto;
+    /* width: 400px; */
+}
+.btn-container{
+    display: flex;
+    margin-right: 78px;
+
+}
+.article{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+.edit{
+    color: green;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.delete{
+    color:red;
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.text{
+    margin-left: 78px;
+}
