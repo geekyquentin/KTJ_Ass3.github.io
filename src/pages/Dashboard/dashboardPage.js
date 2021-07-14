@@ -76,6 +76,7 @@ function DashboardPage() {
 			<Helmet>
 				<title>Messaging Mafia | Dashboard</title>
 			</Helmet>
+			<div className="dashboardTitleText">Dashboard</div>
 			<section className='section-center'>
 
 				<form className='form' onSubmit={onSubmitForm}>

@@ -10,6 +10,13 @@
 	padding: 6px;
 	margin-bottom: 17px;
 }
+
+.dashboardTitleText {
+	font-size: 3rem;
+	text-align: center;
+	font-weight: 100;
+}
+
 .btn {
 	color: white;
 	background-color: #6b5b95af;
@@ -78,7 +85,8 @@
 }
 
 @media screen and (max-width: 768px) {
-	.section-center {
+	.section-center,
+	.dashboardTitleText {
 		zoom: 0.8;
 	}
 }
