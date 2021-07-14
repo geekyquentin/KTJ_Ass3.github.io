@@ -93,16 +93,6 @@ class SignInForm extends Component {
                                 New to Messaging Mafia?
                             </Link>
                         </div>
-
-                        {/* <div className="socialMediaButtons">
-                        <div className="facebookButton">
-                            <FacebookLoginButton onClick={() => alert("Hello")} />
-                        </div>
-
-                        <div className="instagramButton">
-                            <InstagramLoginButton onClick={() => alert("Hello")} />
-                        </div>
-                    </div> */}
                     </form>
                 </div>
             </div>

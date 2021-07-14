@@ -29,7 +29,7 @@
 
 .formField {
 	margin-bottom: 2rem;
-	position: relative;
+	/* position: relative; */
 	overflow: hidden;
 }
 
