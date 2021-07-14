@@ -1,7 +1,6 @@
 .App {
 	height: 100vh;
 	color: white;
-	background-color: #12130f;
 	/* background-color: #f0f4fb; */
 }
 
@@ -41,6 +40,7 @@
 
 .pageSwitcherItem {
 	color: #9da6b1;
+	position: relative;
 	text-transform: uppercase;
 	padding: 10px 2px;
 	margin: 0 25px;
@@ -51,6 +51,24 @@
 	text-decoration: none;
 	vertical-align: middle;
 }
+
+/* .pageSwitcherItem::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	height: 0.175rem;
+	background-color: #6b5b95;
+}
+
+.UHA::after {
+	transform: scale(0, 1);
+}
+
+.UHA:hover {
+	transform: scale(1, 1);
+} */
 
 .pageSwitcherItem-active {
 	border-bottom: 1px solid #6b5b95;

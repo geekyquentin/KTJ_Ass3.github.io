@@ -8,6 +8,19 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #12130f;
+}
+
+body::-webkit-scrollbar {
+	width: 0.4rem;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #6b5b95af;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background-color: #6b5b95;
 }
 
 .mr-20 {

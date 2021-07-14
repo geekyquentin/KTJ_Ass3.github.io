@@ -19,21 +19,21 @@ class App extends Component {
 								<NavLink
 									to="/dashboard"
 									activeClassName="pageSwitcherItem-active"
-									className="pageSwitcherItem"
+									className="pageSwitcherItem UHA"
 								>
 									Dashboard
 								</NavLink>
 								<NavLink
 									to="/sign-in"
 									activeClassName="pageSwitcherItem-active"
-									className="pageSwitcherItem"
+									className="pageSwitcherItem UHA"
 								>
 									Sign In
 								</NavLink>
 								<NavLink
 									to="/sign-up"
 									activeClassName="pageSwitcherItem-active"
-									className="pageSwitcherItem"
+									className="pageSwitcherItem UHA"
 								>
 									Sign Up
 								</NavLink>

@@ -29,6 +29,8 @@
 
 .formField {
 	margin-bottom: 2rem;
+	position: relative;
+	overflow: hidden;
 }
 
 .formFieldLabel {
@@ -50,12 +52,27 @@
 	margin-top: 10px;
 }
 
+/* .formFieldLabel::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	border-bottom: 3px solid #6b5b95;
+	transform: translateX(-100%);
+	transition: all 0.3s ease;
+}
+
+.formFieldInput:focus + .formFieldLabel::after {
+	transform: translateX(0);
+} */
+
 .formFieldInput::placeholder {
 	color: #616e7f;
 }
 
 .formFieldButton {
-	background-color: #6b5b95;
+	background-color: #6b5b95af;
 	color: white;
 	border: none;
 	outline: none;
@@ -67,7 +84,7 @@
 }
 
 .formFieldButton:hover {
-	background-color: #4c406b;
+	background-color: #6b5b95;
 }
 
 .formFieldLink {

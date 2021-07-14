@@ -73,6 +73,34 @@ class SignUpForm extends Component {
                             />
                         </div>
                         <div className="formField">
+                            <label className="formFieldLabel" htmlFor="email">
+                                E-Mail Address
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                className="formFieldInput"
+                                placeholder="Enter your email"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <div className="formField">
+                            <label className="formFieldLabel" htmlFor="email">
+                                Phone Number
+                            </label>
+                            <input
+                                type="tel"
+                                id="number"
+                                className="formFieldInput"
+                                placeholder="Enter your phone number"
+                                name="email"
+                                value={this.state.number}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <div className="formField">
                             <label className="formFieldLabel" htmlFor="password">
                                 Password
                             </label>
@@ -87,16 +115,16 @@ class SignUpForm extends Component {
                             />
                         </div>
                         <div className="formField">
-                            <label className="formFieldLabel" htmlFor="email">
-                                E-Mail Address
+                            <label className="formFieldLabel" htmlFor="password">
+                                Confirm Password
                             </label>
                             <input
-                                type="email"
-                                id="email"
+                                type="password"
+                                id="password"
                                 className="formFieldInput"
-                                placeholder="Enter your email"
-                                name="email"
-                                value={this.state.email}
+                                placeholder="Confirm your password"
+                                name="password"
+                                value={this.state.password}
                                 onChange={this.handleChange}
                             />
                         </div>
