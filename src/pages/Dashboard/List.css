@@ -55,7 +55,7 @@
 	background: none;
 	cursor: pointer;
 	transition: 0.2s;
-	color: #646f7d;
+	color: rgb(85, 85, 85);
 }
 
 .delete {

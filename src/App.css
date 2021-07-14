@@ -6,7 +6,7 @@
 
 .appForm {
 	width: 100%;
-	padding: 25px 40px;
+	padding: 2rem 3rem;
 }
 
 .navbar {
@@ -42,8 +42,8 @@
 	color: #9da6b1;
 	position: relative;
 	text-transform: uppercase;
-	padding: 10px 2px;
-	margin: 0 25px;
+	padding: 1rem 0.1rem;
+	margin: 0 0 0 2.5rem;
 	cursor: pointer;
 	font-size: 0.9em;
 	border: none;
@@ -73,4 +73,14 @@
 .pageSwitcherItem-active {
 	border-bottom: 1px solid #6b5b95;
 	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	.appForm {
+		padding: 2rem 1rem;
+	}
+
+	/* .navbar {
+		padding: 2rem 3rem;
+	} */
 }
