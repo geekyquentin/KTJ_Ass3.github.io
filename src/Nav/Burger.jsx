@@ -11,16 +11,16 @@ const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		flex-flow: column nowrap;
-		background-color: #0d2538;
+		background-color: #2c2d2e;
 		position: fixed;
 		transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
 		top: 1rem;
 		right: 0;
 		width: 15rem;
 		padding-top: 3.5rem;
-		transition: transform 0.3s ease-in-out;
-		border-top-left-radius: 1rem;
-		border-bottom-left-radius: 1rem;
+		transition: transform 0.2s ease-in-out;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
 
 		li {
 			padding-top: 20px;
@@ -52,7 +52,7 @@ const StyledBurger = styled.div`
 		background-color: ${({ open }) => (open ? '#ccc' : '#333')};
 		border-radius: 10px;
 		transform-origin: 1px;
-		transition: all 0.3s linear;
+		transition: all 0.2s linear;
 
 		&:nth-child(1) {
 			transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
