@@ -19,8 +19,8 @@ function List({ items, deleteItem, editItem }) {
                                 </div>
                             </div>
                             <div className='btn-container'>
-                                <button className='edit' onClick={() => editItem(id)}><i class="fas fa-pen"></i></button>
-                                <button className='delete' onClick={() => deleteItem(id)}><i class="fas fa-trash"></i></button>
+                                <button className='edit' onClick={() => editItem(id)}><i className="fas fa-pen"></i></button>
+                                <button className='delete' onClick={() => deleteItem(id)}><i className="fas fa-trash"></i></button>
                             </div>
                         </article>
                         <p className='userPostListItemText'>
@@ -28,11 +28,11 @@ function List({ items, deleteItem, editItem }) {
                         </p>
                         <div className="LikesAndDislikeBtn">
                             <div className="LikebtnAndNumber">
-                                <button className="Likebtn"><i class="fas fa-thumbs-up"></i></button>
+                                <button className="Likebtn"><i className="fas fa-thumbs-up"></i></button>
                                 <span className="LikeNumber">39</span>
                             </div>
                             <div className="DislikebtnAndNumber">
-                                <button className="Dislikebtn"><i class="fas fa-thumbs-down"></i></button>
+                                <button className="Dislikebtn"><i className="fas fa-thumbs-down"></i></button>
                                 <span className="DislikeNumber">404</span>
                             </div>
                         </div>
