@@ -1,5 +1,4 @@
 .section-center {
-	margin: 1rem 0;
 	max-width: 50rem;
 	margin: 1rem auto;
 	padding-top: 10px;
@@ -76,4 +75,14 @@
 .alert-danger {
 	background-color: rgb(241 152 152 / 45%);
 	color: rgb(199, 6, 6);
+}
+
+@media screen and (max-width: 768px) {
+	.section-center {
+		zoom: 0.8;
+	}
+
+	.postHeading {
+		zoom: 0.8;
+	}
 }

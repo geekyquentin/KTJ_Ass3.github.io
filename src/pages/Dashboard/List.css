@@ -95,3 +95,9 @@
 .Dislikebtn:hover {
 	color: white;
 }
+
+@media screen and (max-width: 768px) {
+	.article {
+		zoom: 0.8;
+	}
+}

@@ -11,7 +11,7 @@ function List({ items, deleteItem, editItem }) {
                         <article className='article' key={id}>
                             <div className="userNameAndProfile">
                                 <div className="userProfileIcon">
-                                    <i class="fas fa-2x fa-user-circle"></i>
+                                    <i className="fas fa-2x fa-user-circle"></i>
                                 </div>
                                 <div className="userNameAndTime">
                                     <div className="userName">Yashwant Krishna</div>
