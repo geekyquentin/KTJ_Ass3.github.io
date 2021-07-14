@@ -18,7 +18,7 @@ const Navbar = () => {
 	// const bigName = 'Messaging Mafia';
 	// const smallName = 'M M';
 	return (
-		<Nav>
+		<Nav className="navbar">
 			<div className="iconText">
 				<img src={companyLogo} className="navbarLogo" alt="logo" />
 				{/* <span className="logoName">{`${isMobile} ? ${bigName} : ${smallName}`}</span> */}

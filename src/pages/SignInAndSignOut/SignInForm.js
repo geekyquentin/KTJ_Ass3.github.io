@@ -35,7 +35,7 @@ class SignInForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="totalForm">
                 <Helmet>
                     <title>Messaging Mafia | Sign In</title>
                 </Helmet>

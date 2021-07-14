@@ -128,3 +128,9 @@
 	-khtml-user-select: none;
 	user-select: none;
 }
+
+@media screen and (max-width: 768px) {
+	.totalForm {
+		padding: 0 1.5rem;
+	}
+}
