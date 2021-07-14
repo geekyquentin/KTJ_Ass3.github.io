@@ -20,15 +20,11 @@ const Navbar = () => {
 	return (
 		<Nav className="navbar">
 			<div className="iconText">
-				<img src={companyLogo} className="navbarLogo" alt="logo" />
+				<MediaQuery query="(min-width: 768px)">
+					<img src={companyLogo} className="navbarLogo" alt="logo" />
+				</MediaQuery>
 				{/* <span className="logoName">{`${isMobile} ? ${bigName} : ${smallName}`}</span> */}
-				<span className="logoName">
-					<MediaQuery query="(min-width: 768px)">
-						{(matches) => {
-							return matches ? 'Messaging Mafia' : 'M M';
-						}}
-					</MediaQuery>
-				</span>
+				<span className="logoName">Messaging Mafia</span>
 			</div>
 			<Burger />
 		</Nav>
