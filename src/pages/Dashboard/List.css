@@ -1,33 +1,97 @@
-.grocery-list{
-    /* border: 1px solid red; */
-    margin: 20px auto;
-    /* width: 400px; */
-}
-.btn-container{
-    display: flex;
-    margin-right: 78px;
+/* .grocery-list {
+	
+} */
 
+.listOfPosts {
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+	padding: 1rem 0rem 1rem 1.2rem;
+	background-color: #282828;
+	box-shadow: 3px 3px 15px black;
 }
-.article{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    
+
+.article {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
 }
-.edit{
-    color: green;
-    margin-right: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
+
+.fa-user-circle {
+	zoom: 1.5;
+	padding-right: 0.5rem;
 }
-.delete{
-    color:red;
-    margin-left: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
+
+.userNameAndProfile {
+	display: flex;
+	flex-direction: row;
 }
-.text{
-    margin-left: 78px;
+
+.userNameAndTime {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.userName {
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.userPostTime {
+	color: #8d949e;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.edit,
+.delete,
+.Likebtn,
+.Dislikebtn {
+	zoom: 1.5;
+	border-radius: 10rem;
+	padding: 0.38rem 0.5rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+	transition: 0.2s;
+	color: #646f7d;
+}
+
+.delete {
+	margin: 0 0.5rem;
+}
+
+.edit:hover,
+.delete:hover {
+	background-color: #6b5b95;
+	color: white;
+}
+
+.userPostListItemText {
+	margin-bottom: 1rem;
+	margin-right: 0.8rem;
+	line-height: 1.6rem;
+	font-family: sans-serif;
+	color: rgb(225, 225, 225);
+}
+
+.LikesAndDislikeBtn {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.LikebtnAndNumber {
+	margin-right: 1rem;
+}
+
+.LikeNumber,
+.DislikeNumber {
+	color: #646f7d;
+}
+
+.Likebtn:hover,
+.Dislikebtn:hover {
+	color: white;
 }

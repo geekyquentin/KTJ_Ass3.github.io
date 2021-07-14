@@ -51,10 +51,6 @@ function DashboardPage() {
 			setName('');
 		}
 	}
-	const clearList = () => {
-		showAlert(true, 'danger', 'empty list');
-		setList([]);
-	}
 
 	const showAlert = (show = false, type = "", msg = "") => {
 		setAlert({ show, type, msg });
@@ -86,21 +82,25 @@ function DashboardPage() {
 					{
 						alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />
 					}
-					<h3 className='head'>Grocery Bud</h3>
+					<div className="postHeadingAndSubmitBtn">
+						<div className="postHeading">
+							What's on your mind?
+						</div>
+						<button className='btn'>
+							{isEditing ? 'Edit' : 'Share'}
+						</button>
+					</div>
+
 					<div className="grow-wrap">
 						<textarea type='text' className="userPost" value={name}
-							placeholder='eg: eggs'
+							placeholder="Write your post here..."
 							onChange={(e) => setName(e.target.value)}>
 						</textarea>
 					</div>
-					<button className='btn'>{isEditing ? 'Edit' : 'Submit'}</button>
-
-
 				</form>
 				{
 					list.length > 0 && <div className='grocery-container'>
 						<List items={list} deleteItem={deleteItem} editItem={editItem} />
-						<button className='btn-clear' onClick={clearList}>Clear items</button>
 					</div>
 				}
 
