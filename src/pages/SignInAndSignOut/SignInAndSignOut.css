@@ -63,7 +63,7 @@
 	transition: all 0.3s ease;
 }
 
-.formFieldInput:focus + .formFieldLabel::after {
+.formFieldInput:focus ~ .formFieldLabel {
 	transform: translateX(0);
 } */
 

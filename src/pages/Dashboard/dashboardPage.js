@@ -87,9 +87,12 @@ function DashboardPage() {
 						alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />
 					}
 					<h3 className='head'>Grocery Bud</h3>
-					<input type='text' className="userPost" value={name}
-						placeholder='eg: eggs'
-						onChange={(e) => setName(e.target.value)} />
+					<div className="grow-wrap">
+						<textarea type='text' className="userPost" value={name}
+							placeholder='eg: eggs'
+							onChange={(e) => setName(e.target.value)}>
+						</textarea>
+					</div>
 					<button className='btn'>{isEditing ? 'Edit' : 'Submit'}</button>
 
 

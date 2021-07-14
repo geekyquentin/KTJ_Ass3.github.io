@@ -1,44 +1,16 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, NavLink, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect } from "react-router-dom";
 import dashboardPage from "./pages/Dashboard/dashboardPage";
 import SignUpForm from "./pages/SignInAndSignOut/SignUpForm";
 import SignInForm from "./pages/SignInAndSignOut/SignInForm";
-import companyLogo from "./logo.ico";
-
-import "./App.css";
-
+import Navbar from './Nav/Navbar';
 class App extends Component {
 	render() {
 		return (
 			<Router>
 				<div className="App">
 					<div className="appForm">
-						<div className="navbar">
-							<div className="iconText"><img src={companyLogo} className="navbarLogo" alt="logo" /><span className="logoName">Messaging Mafia</span></div>
-							<div className="pageSwitcher">
-								<NavLink
-									to="/dashboard"
-									activeClassName="pageSwitcherItem-active"
-									className="pageSwitcherItem UHA"
-								>
-									Dashboard
-								</NavLink>
-								<NavLink
-									to="/sign-in"
-									activeClassName="pageSwitcherItem-active"
-									className="pageSwitcherItem UHA"
-								>
-									Sign In
-								</NavLink>
-								<NavLink
-									to="/sign-up"
-									activeClassName="pageSwitcherItem-active"
-									className="pageSwitcherItem UHA"
-								>
-									Sign Up
-								</NavLink>
-							</div>
-						</div>
+						<Navbar />
 
 						<Route exact path="/" render={() => {
 							return (
@@ -50,7 +22,7 @@ class App extends Component {
 						<Route path="/sign-in" component={SignInForm} />
 					</div>
 				</div>
-			</Router>
+			</Router >
 		);
 	}
 }
