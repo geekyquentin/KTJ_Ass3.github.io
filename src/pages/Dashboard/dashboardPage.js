@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet';
 import List from './List';
-import Alert from './Alert';
+import Alert from '../../Alert';
 
 const getLocalStorage = () => {
 	let myList = localStorage.getItem('list');
@@ -27,12 +27,12 @@ function DashboardPage() {
 	const [isEditing, SetIsEditing] = useState(false);
 	const [list, setList] = useState(getLocalStorage());
 	const [editId, setEditId] = useState(null);
-	const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
+	const [alert, setAlert] = useState({ show: false, msg: '' });
 	// console.log(alert.show)
 	const onSubmitForm = (e) => {
 		e.preventDefault();
 		if (!name) {
-			showAlert(true, 'danger', 'please enter text')
+			showAlert(true, 'Please enter text')
 		}
 		else if (name && isEditing) {
 			setList(list.map((item) => {
@@ -41,25 +41,25 @@ function DashboardPage() {
 				}
 				return item;
 			}))
-			showAlert(true, 'success', 'edit successfully')
+			showAlert(true, 'Edited successfully')
 			setName('');
 			SetIsEditing(false);
 			setEditId(null);
 		}
 		else {
-			showAlert(true, 'success', 'list added successfully')
+			showAlert(true, 'List added successfully')
 			const newItem = { id: new Date().getTime().toString(), title: name, like: numberOfLikes, dislike: numberOfDislikes };
 			setList([...list, newItem]);
 			setName('');
 		}
 	}
 
-	const showAlert = (show = false, type = "", msg = "") => {
-		setAlert({ show, type, msg });
+	const showAlert = (show = false, msg = "") => {
+		setAlert({ show, msg });
 	}
 
 	const deleteItem = (id) => {
-		showAlert(true, 'danger', 'item deleted');
+		showAlert(true, 'Item deleted');
 		setList(list.filter((item) => item.id !== id));
 
 	}
@@ -110,9 +110,6 @@ function DashboardPage() {
 			<section className='section-center'>
 
 				<form className='form' onSubmit={onSubmitForm}>
-					{
-						alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />
-					}
 					<div className="postHeadingAndSubmitBtn">
 						<div className="postHeading">
 							What's on your mind?
@@ -134,7 +131,11 @@ function DashboardPage() {
 						<List items={list} deleteItem={deleteItem} editItem={editItem} likeCount={likeCount} dislikeCount={dislikeCount} />
 					</div>
 				}
-
+				<div className="postAlert">
+					{
+						alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />
+					}
+				</div>
 			</section>
 		</div>
 	);

@@ -79,6 +79,21 @@
 	margin-top: 3rem;
 }
 
+.alert {
+	/* border: 1px solid black; */
+	text-align: center;
+	padding: 1rem 1.5rem;
+	border-radius: 20rem;
+	background-color: #353535;
+}
+
+.postAlert {
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 5rem;
+}
+
 @media screen and (max-width: 768px) {
 	.appForm {
 		padding: 1rem 1rem 2rem 1rem;
