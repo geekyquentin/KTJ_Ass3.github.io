@@ -90,4 +90,7 @@
 	.dashboardTitleText {
 		zoom: 0.8;
 	}
+	.userPostListItemText {
+		font-size: 1.2rem;
+	}
 }
