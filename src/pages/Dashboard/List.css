@@ -76,8 +76,9 @@
 .userPostListItemText {
 	margin-bottom: 1rem;
 	margin-right: 0.8rem;
-	line-height: 1.6rem;
-	font-family: sans-serif;
+	line-height: 1.7rem;
+	font-size: 1.1rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: rgb(225, 225, 225);
 }
 
