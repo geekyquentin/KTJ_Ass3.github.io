@@ -2,7 +2,7 @@
 //import { FaEdit, FaTrash } from 'react-icons/fa'
 import './List.css'
 
-function List({ items, deleteItem, editItem }) {
+function List({ items, deleteItem, editItem, likeCount, dislikeCount }) {
 
     return (
         <section>
@@ -30,11 +30,11 @@ function List({ items, deleteItem, editItem }) {
                         </p>
                         <div className="LikesAndDislikeBtn">
                             <div className="LikebtnAndNumber">
-                                <button className="Likebtn" onClick={() => like(id)}><i className="fas fa-thumbs-up"></i></button>
+                                <button className="Likebtn" onClick={() => likeCount(id)}><i className="fas fa-thumbs-up"></i></button>
                                 <span className="LikeNumber">{like}</span>
                             </div>
                             <div className="DislikebtnAndNumber">
-                                <button className="Dislikebtn" onClick={() => dislike(id)}><i className="fas fa-thumbs-down"></i></button>
+                                <button className="Dislikebtn" onClick={() => dislikeCount(id)}><i className="fas fa-thumbs-down"></i></button>
                                 <span className="DislikeNumber">{dislike}</span>
                             </div>
                         </div>

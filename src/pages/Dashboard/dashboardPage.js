@@ -15,10 +15,15 @@ const getLocalStorage = () => {
 	}
 }
 
+let numberOfLikes = 0;
+let numberOfDislikes = 30;
+
 function DashboardPage() {
 	const [name, setName] = useState('');
 	// const [like, setLike] = useState(0);
 	// const [dislike, setDislike] = useState(0);
+	let [liked, setIsLiked] = useState(false);
+	let [disliked, setIsDisliked] = useState(false);
 	const [isEditing, SetIsEditing] = useState(false);
 	const [list, setList] = useState(getLocalStorage());
 	const [editId, setEditId] = useState(null);
@@ -32,8 +37,7 @@ function DashboardPage() {
 		else if (name && isEditing) {
 			setList(list.map((item) => {
 				if (item.id === editId) {
-					const nameModify = name + "it worked";
-					return { ...item, title: nameModify, like: 0, dislike: 0 }
+					return { ...item, title: name, like: numberOfLikes, dislike: numberOfDislikes }
 				}
 				return item;
 			}))
@@ -44,7 +48,7 @@ function DashboardPage() {
 		}
 		else {
 			showAlert(true, 'success', 'list added successfully')
-			const newItem = { id: new Date().getTime().toString(), title: name };
+			const newItem = { id: new Date().getTime().toString(), title: name, like: numberOfLikes, dislike: numberOfDislikes };
 			setList([...list, newItem]);
 			setName('');
 		}
@@ -66,6 +70,34 @@ function DashboardPage() {
 		setEditId(itemEdit.id);
 		setName(itemEdit.title);
 	}
+
+	const likeCount = (id) => {
+		console.log("clicked: " + liked);
+		setIsLiked(true);
+		setIsDisliked(false);
+		console.log("clicked: " + liked);
+		if (disliked === true) {
+			setIsDisliked(false);
+		}
+		console.log("clicked: " + liked);
+
+		liked ? console.log("it is liked") : console.log("it is not liked");
+		disliked ? console.log("it is disliked") : console.log("it is not disliked");
+		console.log("write this down" + id);
+	}
+
+	const dislikeCount = (id) => {
+		setIsDisliked(true);
+		setIsLiked(false);
+		if (liked === true) {
+			setIsDisliked(false);
+		}
+
+		liked ? console.log("it is liked") : console.log("it is not liked");
+		disliked ? console.log("it is disliked") : console.log("it is not disliked");
+		console.log("write this down" + id);
+	}
+
 	useEffect(() => {
 		localStorage.setItem('list', JSON.stringify(list));
 	}, [list])
@@ -99,7 +131,7 @@ function DashboardPage() {
 				</form>
 				{
 					list.length > 0 && <div className='grocery-container'>
-						<List items={list} deleteItem={deleteItem} editItem={editItem} />
+						<List items={list} deleteItem={deleteItem} editItem={editItem} likeCount={likeCount} dislikeCount={dislikeCount} />
 					</div>
 				}
 
