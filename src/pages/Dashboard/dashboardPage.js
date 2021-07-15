@@ -15,13 +15,10 @@ const getLocalStorage = () => {
 	}
 }
 
-let numberOfLikes = 0;
-let numberOfDislikes = 30;
-
 function DashboardPage() {
 	const [name, setName] = useState('');
-	// const [like, setLike] = useState(0);
-	// const [dislike, setDislike] = useState(0);
+	let [likeNumber, setLikeNumber] = useState(0);
+	let [dislikeNumber, setDislikeNumber] = useState(0);
 	let [liked, setIsLiked] = useState(false);
 	let [disliked, setIsDisliked] = useState(false);
 	const [isEditing, SetIsEditing] = useState(false);
@@ -37,7 +34,7 @@ function DashboardPage() {
 		else if (name && isEditing) {
 			setList(list.map((item) => {
 				if (item.id === editId) {
-					return { ...item, title: name, like: numberOfLikes, dislike: numberOfDislikes }
+					return { ...item, title: name, like: likeNumber, dislike: dislikeNumber }
 				}
 				return item;
 			}))
@@ -48,7 +45,7 @@ function DashboardPage() {
 		}
 		else {
 			showAlert(true, 'List added successfully')
-			const newItem = { id: new Date().getTime().toString(), title: name, like: numberOfLikes, dislike: numberOfDislikes };
+			const newItem = { id: new Date().getTime().toString(), title: name, like: likeNumber, dislike: dislikeNumber };
 			setList([...list, newItem]);
 			setName('');
 		}
@@ -72,30 +69,34 @@ function DashboardPage() {
 	}
 
 	const likeCount = (id) => {
-		console.log("clicked: " + liked);
-		setIsLiked(true);
-		setIsDisliked(false);
-		console.log("clicked: " + liked);
-		if (disliked === true) {
-			setIsDisliked(false);
+		let likeCount = list.find((item) => item.id === id);
+		if (liked === true) {
+			likeNumber -= 1;
+			setIsLiked(false);
 		}
-		console.log("clicked: " + liked);
-
-		liked ? console.log("it is liked") : console.log("it is not liked");
-		disliked ? console.log("it is disliked") : console.log("it is not disliked");
-		console.log("write this down" + id);
+		else {
+			setIsLiked(true);
+			likeNumber += 1;
+		}
+		console.log("Like count: " + likeNumber);
+		setLikeNumber(likeCount.likeNumber);
+		setIsDisliked(false);
 	}
 
 	const dislikeCount = (id) => {
-		setIsDisliked(true);
-		setIsLiked(false);
-		if (liked === true) {
+		let dislikeCount = list.find((item) => item.id === id);
+		if (disliked === true) {
+			dislikeNumber -= 1;
+			console.log("Dislike number: " + dislikeNumber);
 			setIsDisliked(false);
 		}
-
-		liked ? console.log("it is liked") : console.log("it is not liked");
-		disliked ? console.log("it is disliked") : console.log("it is not disliked");
-		console.log("write this down" + id);
+		else {
+			dislikeNumber += 1;
+			console.log("Dislike number: " + dislikeNumber);
+			setIsDisliked(true);
+		}
+		setDislikeNumber(dislikeCount.dislikeNumber);
+		setIsLiked(false);
 	}
 
 	useEffect(() => {
