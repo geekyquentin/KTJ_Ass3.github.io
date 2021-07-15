@@ -7,6 +7,7 @@ import Alert from './Alert';
 const getLocalStorage = () => {
 	let myList = localStorage.getItem('list');
 	if (myList) {
+		console.log(myList);
 		return JSON.parse(myList);
 	}
 	else {
@@ -16,6 +17,8 @@ const getLocalStorage = () => {
 
 function DashboardPage() {
 	const [name, setName] = useState('');
+	// const [like, setLike] = useState(0);
+	// const [dislike, setDislike] = useState(0);
 	const [isEditing, SetIsEditing] = useState(false);
 	const [list, setList] = useState(getLocalStorage());
 	const [editId, setEditId] = useState(null);
@@ -29,7 +32,8 @@ function DashboardPage() {
 		else if (name && isEditing) {
 			setList(list.map((item) => {
 				if (item.id === editId) {
-					return { ...item, title: name }
+					const nameModify = name + "it worked";
+					return { ...item, title: nameModify, like: 0, dislike: 0 }
 				}
 				return item;
 			}))

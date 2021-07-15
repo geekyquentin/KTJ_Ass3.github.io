@@ -5,10 +5,10 @@ import './List.css'
 function List({ items, deleteItem, editItem }) {
 
     return (
-        <section className='grocery-list'>
+        <section>
             {
                 items.map((item) => {
-                    const { title, id } = item;
+                    const { title, id, like, dislike } = item;
                     return <div className="listOfPosts">
                         <article className='article' key={id}>
                             <div className="userNameAndProfile">
@@ -30,12 +30,12 @@ function List({ items, deleteItem, editItem }) {
                         </p>
                         <div className="LikesAndDislikeBtn">
                             <div className="LikebtnAndNumber">
-                                <button className="Likebtn"><i className="fas fa-thumbs-up"></i></button>
-                                <span className="LikeNumber">0</span>
+                                <button className="Likebtn" onClick={() => like(id)}><i className="fas fa-thumbs-up"></i></button>
+                                <span className="LikeNumber">{like}</span>
                             </div>
                             <div className="DislikebtnAndNumber">
-                                <button className="Dislikebtn"><i className="fas fa-thumbs-down"></i></button>
-                                <span className="DislikeNumber">0</span>
+                                <button className="Dislikebtn" onClick={() => dislike(id)}><i className="fas fa-thumbs-down"></i></button>
+                                <span className="DislikeNumber">{dislike}</span>
                             </div>
                         </div>
                     </div>
