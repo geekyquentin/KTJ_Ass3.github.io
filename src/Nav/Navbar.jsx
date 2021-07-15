@@ -10,6 +10,17 @@ const Nav = styled.nav`
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		position: fixed;
+		width: 100%;
+		padding: 0.7rem 2rem;
+		background-color: #000;
+		top: 0;
+	}
+	@media screen and (max-width: 768px) {
+		 {
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
 	}
 `;
 

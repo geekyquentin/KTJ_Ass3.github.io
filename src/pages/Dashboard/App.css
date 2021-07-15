@@ -1,6 +1,7 @@
 .section-center {
 	max-width: 50rem;
 	margin: 0 auto;
+	padding: 0 0.5rem;
 }
 
 .head {
@@ -14,23 +15,25 @@
 	font-size: 2.5rem;
 	text-align: center;
 	font-weight: 100;
+	margin-top: 7rem;
+	margin-bottom: 1rem;
 }
 
 .btn {
-	color: white;
-	background-color: #6b5b95af;
+	color: #6b5b95af;
+	background: none;
 	padding: 0.4rem 1rem;
 	font-size: 1rem;
 	cursor: pointer;
 	border-radius: 0.3rem;
 	outline: none;
-	border: none;
+	border: 2px solid #6b5b95af;
 	font-weight: bold;
-	box-shadow: 2px 2px 15px rgb(36, 36, 36);
 	transition: 0.2s;
 }
 .btn:hover {
 	background-color: #6b5b95;
+	color: white;
 }
 
 .grow-wrap {

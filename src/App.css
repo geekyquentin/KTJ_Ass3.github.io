@@ -6,14 +6,6 @@
 
 .appForm {
 	width: 100%;
-	padding: 2rem 3rem;
-}
-
-.navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
 }
 
 /* .iconText {
@@ -75,10 +67,6 @@
 	color: white;
 }
 
-.dashboardTitleText {
-	margin-top: 3rem;
-}
-
 .alert {
 	/* border: 1px solid black; */
 	text-align: center;
@@ -92,15 +80,4 @@
 	left: 50%;
 	transform: translate(-50%, 0);
 	bottom: 5rem;
-}
-
-@media screen and (max-width: 768px) {
-	.appForm {
-		padding: 1rem 1rem 2rem 1rem;
-	}
-
-	.navbar {
-		margin: 0 1rem 2.1rem 0.5rem;
-		padding: 0;
-	}
 }

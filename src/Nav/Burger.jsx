@@ -14,9 +14,9 @@ const Ul = styled.ul`
 		background-color: #2c2d2e;
 		position: fixed;
 		transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-		top: 1rem;
+		top: 0rem;
 		right: 0;
-		width: 15rem;
+		width: 9.5rem;
 		padding-top: 3.5rem;
 		transition: transform 0.2s ease-in-out;
 		border-top-left-radius: 0.5rem;
