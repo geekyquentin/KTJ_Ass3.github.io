@@ -66,7 +66,8 @@
 	border-radius: 0.5rem;
 	padding: 0.6rem;
 	text-align: center;
-	background-color: #282828;
+	/* background-color: #282828; */
+	border: 2px solid #353535;
 	box-shadow: 3px 3px 15px black;
 }
 

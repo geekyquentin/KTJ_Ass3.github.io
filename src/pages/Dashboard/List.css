@@ -6,7 +6,8 @@
 	margin: 1rem auto;
 	border-radius: 0.5rem;
 	padding: 1rem 0rem 1rem 1.2rem;
-	background-color: #282828;
+	/* background-color: #282828; */
+	border: 2px solid #353535;
 	box-shadow: 3px 3px 15px black;
 }
 
@@ -40,7 +41,7 @@
 
 .userPostTime {
 	color: #8d949e;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	font-weight: bold;
 }
 
@@ -68,6 +69,10 @@
 	color: white;
 }
 
+.fa-thumbs-down {
+	transform: rotateY(180deg);
+}
+
 .userPostListItemText {
 	margin-bottom: 1rem;
 	margin-right: 0.8rem;
@@ -88,10 +93,15 @@
 
 .LikeNumber,
 .DislikeNumber {
-	color: #646f7d;
+	color: #8d949e;
 }
 
 .Likebtn:hover,
 .Dislikebtn:hover {
-	color: white;
+	color: rgb(153, 153, 153);
+}
+
+.Likebtn:focus,
+.Dislikebtn:focus {
+	color: #6b5b95;
 }

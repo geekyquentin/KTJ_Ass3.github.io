@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet';
 import List from './List';
 import Alert from './Alert';
 
-
-
 const getLocalStorage = () => {
 	let myList = localStorage.getItem('list');
 	if (myList) {
@@ -16,11 +14,7 @@ const getLocalStorage = () => {
 	}
 }
 
-
-
 function DashboardPage() {
-
-
 	const [name, setName] = useState('');
 	const [isEditing, SetIsEditing] = useState(false);
 	const [list, setList] = useState(getLocalStorage());

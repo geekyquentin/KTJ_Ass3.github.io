@@ -1,7 +1,9 @@
-import React from 'react'
+//import React, { useState } from 'react'
 //import { FaEdit, FaTrash } from 'react-icons/fa'
 import './List.css'
+
 function List({ items, deleteItem, editItem }) {
+
     return (
         <section className='grocery-list'>
             {
@@ -29,11 +31,11 @@ function List({ items, deleteItem, editItem }) {
                         <div className="LikesAndDislikeBtn">
                             <div className="LikebtnAndNumber">
                                 <button className="Likebtn"><i className="fas fa-thumbs-up"></i></button>
-                                <span className="LikeNumber">39</span>
+                                <span className="LikeNumber">0</span>
                             </div>
                             <div className="DislikebtnAndNumber">
                                 <button className="Dislikebtn"><i className="fas fa-thumbs-down"></i></button>
-                                <span className="DislikeNumber">404</span>
+                                <span className="DislikeNumber">0</span>
                             </div>
                         </div>
                     </div>
